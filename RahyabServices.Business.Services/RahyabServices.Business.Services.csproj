@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{779C903D-3C0F-412D-B83E-C99CE529741E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RahyabServices.Business.Services</RootNamespace>
+    <AssemblyName>RahyabServices.Business.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Wcf, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Wcf.4.0.0\lib\net45\Autofac.Integration.Wcf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RahyabServices.Host.WebHost\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contract\GetContractsCountDtoValidator.cs" />
+    <Compile Include="Implementations\AbsorbResources\AbsorbResourcesService.cs" />
+    <Compile Include="Implementations\AuthenticationService.cs" />
+    <Compile Include="Implementations\Bank\ActiveDirectoryService.cs" />
+    <Compile Include="Implementations\Bank\CustomerAccountService.cs" />
+    <Compile Include="Implementations\Bank\HrService.cs" />
+    <Compile Include="Implementations\Bank\IBANConvertor.cs" />
+    <Compile Include="Implementations\Bank\RPTFTDelinquentService.cs" />
+    <Compile Include="Implementations\BranchMarcketing\BranchMarketingService.cs" />
+    <Compile Include="Implementations\Cando\AdanicService.cs" />
+    <Compile Include="Implementations\Cando\FaraFekService.cs" />
+    <Compile Include="Implementations\Delinquent\BranchClaimService.cs" />
+    <Compile Include="Implementations\Delinquent\BranchPrivilegesService.cs" />
+    <Compile Include="Implementations\Delinquent\BranchService.cs" />
+    <Compile Include="Implementations\Delinquent\ClearingService.cs" />
+    <Compile Include="Implementations\Delinquent\ContractService.cs" />
+    <Compile Include="Implementations\Delinquent\DailyDelinquentUpdateService.cs" />
+    <Compile Include="Implementations\Delinquent\DelinquentService.cs" />
+    <Compile Include="Implementations\Delinquent\GivingAchanceService.cs" />
+    <Compile Include="Implementations\Delinquent\ImpunityService.cs" />
+    <Compile Include="Implementations\Delinquent\LogPrivilegeService.cs" />
+    <Compile Include="Implementations\Delinquent\LogService.cs" />
+    <Compile Include="Implementations\Delinquent\NotificationService.cs" />
+    <Compile Include="Implementations\Delinquent\RenewalService.cs" />
+    <Compile Include="Implementations\Delinquent\SmsService.cs" />
+    <Compile Include="Implementations\Delinquent\SplitService.cs" />
+    <Compile Include="Implementations\Delinquent\StateOperationService.cs" />
+    <Compile Include="Implementations\ParsLogic\ParsLogicService.cs" />
+    <Compile Include="Implementations\Sharepoint\EbankingService.cs" />
+    <Compile Include="Implementations\Sharepoint\FinanceService.cs" />
+    <Compile Include="Implementations\Sharepoint\HrDocService.cs" />
+    <Compile Include="Implementations\Sharepoint\MiscService.cs" />
+    <Compile Include="Implementations\Sharepoint\OperationDepartmentService.cs" />
+    <Compile Include="Implementations\Sharepoint\SharepointAuthorizationService.cs" />
+    <Compile Include="Implementations\Supplies\SuppliesService.cs" />
+    <Compile Include="Implementations\TatCharity\TatService.cs" />
+    <Compile Include="Implementations\VipBanking\ChequeService.cs" />
+    <Compile Include="Implementations\VipBanking\GeneralReportService.cs" />
+    <Compile Include="Implementations\VipBanking\LastBalService.cs" />
+    <Compile Include="Implementations\VipBanking\PotentialService.cs" />
+    <Compile Include="Implementations\VipBanking\VipDelinquentService.cs" />
+    <Compile Include="Implementations\VipBanking\VipService.cs" />
+    <Compile Include="Intefaces\AbsorbResources\AbsorbResourcesService.cs" />
+    <Compile Include="Intefaces\Bank\IActiveDirectoryService.cs" />
+    <Compile Include="Intefaces\Bank\ICustomerAccountService.cs" />
+    <Compile Include="Intefaces\Bank\IHrService.cs" />
+    <Compile Include="Intefaces\Bank\IRPTFTDelinquentService.cs" />
+    <Compile Include="Intefaces\BranchMarketing\IBranchMarketingService.cs" />
+    <Compile Include="Intefaces\Cando\IAdanicService.cs" />
+    <Compile Include="Intefaces\Cando\IFaraFekService.cs" />
+    <Compile Include="Intefaces\Delinquent\IBranchClaimService.cs" />
+    <Compile Include="Intefaces\Delinquent\IBranchPrivilegesService.cs" />
+    <Compile Include="Intefaces\Delinquent\IBranchService.cs" />
+    <Compile Include="Intefaces\Delinquent\IClearingService.cs" />
+    <Compile Include="Intefaces\Delinquent\IContractService.cs" />
+    <Compile Include="Intefaces\Delinquent\IDailyDelinquentUpdateService.cs" />
+    <Compile Include="Intefaces\Delinquent\IDelinquentService.cs" />
+    <Compile Include="Intefaces\Delinquent\IGivingAChanceService.cs" />
+    <Compile Include="Intefaces\Delinquent\IImpunityService.cs" />
+    <Compile Include="Intefaces\Delinquent\ILogPrivilegeService.cs" />
+    <Compile Include="Intefaces\Delinquent\ILogService.cs" />
+    <Compile Include="Intefaces\Delinquent\INotificationService.cs" />
+    <Compile Include="Intefaces\Delinquent\IRenewalService.cs" />
+    <Compile Include="Intefaces\Delinquent\ISmsService.cs" />
+    <Compile Include="Intefaces\Delinquent\ISplitService.cs" />
+    <Compile Include="Intefaces\Delinquent\IStateOperationService.cs" />
+    <Compile Include="Intefaces\IAuthenticationService.cs" />
+    <Compile Include="Intefaces\ParsLogic\IParsLogicService.cs" />
+    <Compile Include="Intefaces\Sharepoint\IEbankingService.cs" />
+    <Compile Include="Intefaces\Sharepoint\IFinanceService.cs" />
+    <Compile Include="Intefaces\Sharepoint\IHrDocService.cs" />
+    <Compile Include="Intefaces\Sharepoint\IMiscService.cs" />
+    <Compile Include="Intefaces\Sharepoint\IOperationDepartmentService.cs" />
+    <Compile Include="Intefaces\Sharepoint\ISharepointAuthorizationService.cs" />
+    <Compile Include="Intefaces\Supplies\ISuppliesService.cs" />
+    <Compile Include="Intefaces\TatCharity\ITatService.cs" />
+    <Compile Include="Intefaces\VipBanking\IGeneralReportService.cs" />
+    <Compile Include="Intefaces\VipBanking\IChequeService.cs" />
+    <Compile Include="Intefaces\VipBanking\ILastBalService.cs" />
+    <Compile Include="Intefaces\VipBanking\IPotentialService.cs" />
+    <Compile Include="Intefaces\VipBanking\IVipDelinquentService.cs" />
+    <Compile Include="Intefaces\VipBanking\IVipService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\AppointmentStateHandler.cs" />
+    <Compile Include="State\ClearingStateHandler.cs" />
+    <Compile Include="State\FirstAnnounceStateHandler.cs" />
+    <Compile Include="State\FirstWrittenNoticeDtoStateHandler.cs" />
+    <Compile Include="State\GivingAChanceStateHandler.cs" />
+    <Compile Include="State\ImpunityForCrimesStateHandler.cs" />
+    <Compile Include="State\LetterStateHandler.cs" />
+    <Compile Include="State\RegisterStateHandler.cs" />
+    <Compile Include="State\RenewalStateHandler.cs" />
+    <Compile Include="State\RequestClearingStateHandler.cs" />
+    <Compile Include="State\RequestGivingAChanceStateHandler.cs" />
+    <Compile Include="State\RequestImpunityForCrimesStateHandler.cs" />
+    <Compile Include="State\RequestSplitStateHandler.cs" />
+    <Compile Include="State\SecondAnnounceStateHandler.cs" />
+    <Compile Include="State\SecondWrittenNoticeStateHandler.cs" />
+    <Compile Include="State\SplitStateHandler.cs" />
+    <Compile Include="State\ThirdAnnounceStateHandler.cs" />
+    <Compile Include="State\ThirdWrittenNoticeStateHandler.cs" />
+    <Compile Include="Validators\AbsorbResources\GetCustomerInformationDtqValidator.cs" />
+    <Compile Include="Validators\BankPerson\GetUserInfoByPersonnelNoDtqValidator.cs" />
+    <Compile Include="Validators\BankPerson\IsValidBranchManagerValidator.cs" />
+    <Compile Include="Validators\Cando\CallServiceDtqValidator.cs" />
+    <Compile Include="Validators\Contract\GetCustomerDelinquentHistoryByBranchCodeDtoValidator.cs" />
+    <Compile Include="Validators\Contract\GetCustomerDelinquentHistoryDtoValidator.cs" />
+    <Compile Include="Validators\Contract\GetDueDateContractsDtoValidator.cs" />
+    <Compile Include="Validators\Contract\GetExpireContractsDtoValidator.cs" />
+    <Compile Include="Validators\Customer\GetCustomerInformationDtoValidator.cs" />
+    <Compile Include="Validators\GetContractsByUserNameDtoValidator.cs" />
+    <Compile Include="Validators\Guarantor\GetGuarantorDtoValidator.cs" />
+    <Compile Include="Validators\Log\AddAppointmentLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\AddNoticeLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\AddWrittenNoticeLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\ClearingLog\AddClearingLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\ClearingLog\EditClearingLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\ClearingLog\EditRequestClearingLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\ClearingLog\GetClearingLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\ClearingLog\GetRequestClearingLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\ClearingLog\RespondRequestClearingDtoValidator.cs" />
+    <Compile Include="Validators\Log\GivingAChance\AddGivingAChanceLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\GivingAChance\EditGivingAChanceLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\GivingAChance\EditRequestGivingAChanceLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\GivingAChance\GetGivingAChanceLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\GivingAChance\GetRequestGivingAChanceLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\GivingAChance\RespondRequestGivingAChanceDtoValidator.cs" />
+    <Compile Include="Validators\Log\Impunity\AddImpunityForCrimesLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Impunity\EditImpunityForCrimesLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Impunity\EditRequestmpunityForCrimesLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Impunity\GetImpunityLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Impunity\GetRequestImpunityLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Impunity\RespondRequestImpunityForCrimesDtoValidator.cs" />
+    <Compile Include="Validators\Log\Renewal\AddRenewalLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Renewal\EditRenewalLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Renewal\GetRenewalLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\AddSplitLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\CancelRequestSplitDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\DisableSplitEditingDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\EditRequestSplitLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\EditSplitLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\GetRequestSplitLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\GetSplitLogDtoValidator.cs" />
+    <Compile Include="Validators\Log\Split\RespondRequestSplitDtoValidator.cs" />
+    <Compile Include="Validators\Noification\GetNotificationsDtoValidator.cs" />
+    <Compile Include="Validators\Noification\RemoveNotificationDtoValidator.cs" />
+    <Compile Include="Validators\Noification\UpdateNotificationToSeenDtoValidator.cs" />
+    <Compile Include="Validators\Supplies\AcceptSayadDtcValidator.cs" />
+    <Compile Include="Validators\Supplies\GetAccountInformationDtqValidator.cs" />
+    <Compile Include="Validators\Supplies\InquiryRequestDtcValidator.cs" />
+    <Compile Include="Validators\Supplies\IsValidCustomerInformationDtqValidator.cs" />
+    <Compile Include="Validators\Supplies\RejectSayadDtcValidator.cs" />
+    <Compile Include="Validators\VipBanking\GetPotentialByCustomerNumberValidator.cs" />
+    <Compile Include="Validators\VipBanking\GetThirtyLastBalDtqValidator.cs" />
+    <Compile Include="Validators\VipBanking\GetVipByCustomerNumberDtq.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RahyabServices.Business.Domain\RahyabServices.Business.Domain.csproj">
+      <Project>{bfd7e641-f4db-417a-a0df-ce862de712c6}</Project>
+      <Name>RahyabServices.Business.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.Dtos\RahyabServices.Business.Dtos.csproj">
+      <Project>{7a9b5e9f-897e-45e2-8181-2170244e3bcf}</Project>
+      <Name>RahyabServices.Business.Dtos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.Facades\RahyabServices.Business.Facades.csproj">
+      <Project>{C2A10596-6E55-461B-9BC7-15718D1F570B}</Project>
+      <Name>RahyabServices.Business.Facades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.SharepointAutoMapper\RahyabServices.Business.SharepointAutoMapper.csproj">
+      <Project>{415962B2-4340-4160-8C14-AA5FF3B770FD}</Project>
+      <Name>RahyabServices.Business.SharepointAutoMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Common\RahyabServices.Common.csproj">
+      <Project>{4A39EDA3-01D5-4E60-AFD2-F99C6B222DDA}</Project>
+      <Name>RahyabServices.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.DataAccess\RahyabServices.DataAccess.csproj">
+      <Project>{5471E924-55E3-402F-865E-DC433CE19543}</Project>
+      <Name>RahyabServices.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

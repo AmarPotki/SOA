@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D38ACDBB-0DBA-4F43-ABE9-4A2B2623183F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RahyabServices.Business.Contracts</RootNamespace>
+    <AssemblyName>RahyabServices.Business.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContractBase.cs" />
+    <Compile Include="Implementations\AbsorbResourcesRestContract.cs" />
+    <Compile Include="Implementations\BranchMarketingRestContract.cs" />
+    <Compile Include="Implementations\CallbackEventArgs.cs" />
+    <Compile Include="Implementations\DelinquentCoreServiceContract.cs" />
+    <Compile Include="Implementations\DelinquentServiceContract.cs" />
+    <Compile Include="Implementations\DelinquentServiceRestContract.cs" />
+    <Compile Include="Implementations\FaraFekRestContract.cs" />
+    <Compile Include="Implementations\FinanceRestContract.cs" />
+    <Compile Include="Implementations\MiscContract.cs" />
+    <Compile Include="Implementations\MiscRestContract.cs" />
+    <Compile Include="Implementations\TatRestContract.cs" />
+    <Compile Include="Implementations\ParsLogicRestContract.cs" />
+    <Compile Include="Implementations\HrRestContract.cs" />
+    <Compile Include="Implementations\SuppliesRestContract.cs" />
+    <Compile Include="Implementations\VipBankingRestContract.cs" />
+    <Compile Include="Implementations\AdanicRestContract.cs" />
+    <Compile Include="Interfaces\IAbsorbResourcesRestContract.cs" />
+    <Compile Include="Interfaces\IAdanicRestContract.cs" />
+    <Compile Include="Interfaces\IBranchMarketingRestContract.cs" />
+    <Compile Include="Interfaces\IFaraFekRestContract.cs" />
+    <Compile Include="Interfaces\IFinanceRestContract.cs" />
+    <Compile Include="Interfaces\ICallbackEventArgs.cs" />
+    <Compile Include="Interfaces\IDelinquentCoreServiceCallback.cs" />
+    <Compile Include="Interfaces\IDelinquentCoreServiceContract.cs" />
+    <Compile Include="Interfaces\IDelinquentServiceContract.cs" />
+    <Compile Include="Interfaces\IDelinquentServiceRestContract.cs" />
+    <Compile Include="Interfaces\IMiscContract.cs" />
+    <Compile Include="Interfaces\IMiscRestContract.cs" />
+    <Compile Include="Interfaces\ITatRestContract.cs" />
+    <Compile Include="Interfaces\IHrRestContract.cs" />
+    <Compile Include="Interfaces\IParsLogicRestContract.cs" />
+    <Compile Include="Interfaces\ISuppliesRestContract.cs" />
+    <Compile Include="Interfaces\IVipBankingRestContract.cs" />
+    <Compile Include="Keno.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RahyabServices.Business.Domain\RahyabServices.Business.Domain.csproj">
+      <Project>{bfd7e641-f4db-417a-a0df-ce862de712c6}</Project>
+      <Name>RahyabServices.Business.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.Dtos\RahyabServices.Business.Dtos.csproj">
+      <Project>{7a9b5e9f-897e-45e2-8181-2170244e3bcf}</Project>
+      <Name>RahyabServices.Business.Dtos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.Facades\RahyabServices.Business.Facades.csproj">
+      <Project>{c2a10596-6e55-461b-9bc7-15718d1f570b}</Project>
+      <Name>RahyabServices.Business.Facades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.Services\RahyabServices.Business.Services.csproj">
+      <Project>{779c903d-3c0f-412d-b83e-c99ce529741e}</Project>
+      <Name>RahyabServices.Business.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Common\RahyabServices.Common.csproj">
+      <Project>{4a39eda3-01d5-4e60-afd2-f99c6b222dda}</Project>
+      <Name>RahyabServices.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A9B5E9F-897E-45E2-8181-2170244E3BCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RahyabServices.Business.Dtos</RootNamespace>
+    <AssemblyName>RahyabServices.Business.Dtos</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbsorbResources\CustomerInformationDto.cs" />
+    <Compile Include="AbsorbResources\GetCustomerInformationDtq.cs" />
+    <Compile Include="BankPerson\BranchManagerDto.cs" />
+    <Compile Include="BankPerson\GetUserInfoByPersonnelNoDtq.cs" />
+    <Compile Include="BankPerson\WorkSectionDto.cs" />
+    <Compile Include="Bank\BondDto.cs" />
+    <Compile Include="Bank\BranchDelinquentDto.cs" />
+    <Compile Include="Bank\BranchesDelinquentDto.cs" />
+    <Compile Include="Bank\Factories\Implementations\ToDayDelinquentDtoFactory.cs" />
+    <Compile Include="Bank\Factories\Intefaces\IToDayDelinquentDtoFactory.cs" />
+    <Compile Include="Bank\GetBondDto.cs" />
+    <Compile Include="Bank\GetBranchDelinquentDtq.cs" />
+    <Compile Include="Bank\GetBranchesDelinquentDtq.cs" />
+    <Compile Include="Bank\GetGuarantorsDto.cs" />
+    <Compile Include="Bank\GetToDayDelinquentDto.cs" />
+    <Compile Include="BankPerson\GetUserInfoDtq.cs" />
+    <Compile Include="Bank\GuarantorsDto.cs" />
+    <Compile Include="BankPerson\PersonInfoDto.cs" />
+    <Compile Include="Bank\LastBalDetailDto.cs" />
+    <Compile Include="Bank\ToDayDelinquentDto.cs" />
+    <Compile Include="Bank\GetLastBalCustomerDto.cs" />
+    <Compile Include="Bank\LastBalAcountsDto.cs" />
+    <Compile Include="BranchMarketing\GetApproveItemsDto.cs" />
+    <Compile Include="BranchMarketing\GetDeleteItemDtc.cs" />
+    <Compile Include="BranchMarketing\ResultApproveDtc.cs" />
+    <Compile Include="BranchMarketing\ResultItemsDto.cs" />
+    <Compile Include="BranchMarketing\ResutlDeleteItemDto.cs" />
+    <Compile Include="Cando\Adanic\CallServiceDtq.cs" />
+    <Compile Include="Cando\FaraFek\GetDashbordDtq.cs" />
+    <Compile Include="Cando\FaraFek\GetDiagramDtq.cs" />
+    <Compile Include="Cando\FaraFek\GetDiagramPostDtq.cs" />
+    <Compile Include="Cando\FaraFek\GetInfoDtq.cs" />
+    <Compile Include="Cando\FaraFek\GetInfoPostDtq.cs" />
+    <Compile Include="Cando\FaraFek\GetPlotCsvDtq.cs" />
+    <Compile Include="Cando\FaraFek\GetPlotCsvPostDtq.cs" />
+    <Compile Include="Delinquent\BranchClaim\BranchClaimDto.cs" />
+    <Compile Include="Delinquent\BranchClaim\GetBranchClaimDto.cs" />
+    <Compile Include="Delinquent\BranchClaim\GetLastSevenDaysBranchClaimsDto.cs" />
+    <Compile Include="Delinquent\Branch\BranchDto.cs" />
+    <Compile Include="Delinquent\Branch\GetBranchDto.cs" />
+    <Compile Include="Delinquent\Contracts\CountAndSumDto.cs" />
+    <Compile Include="Delinquent\Contracts\CustomerDelinquentDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetAllDebtsContractsDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetAllDebtsDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetBadDebtDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetContractsByUserNameDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetContractsCountDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetCurrentContractsDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetCustomerDelinquentHistoryDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetDueDateContractsDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetExpireContractsDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetOneMonthToDueDateContractsDto.cs" />
+    <Compile Include="Delinquent\Contracts\GetPostponedDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\AllBranchActivityDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetAllBranchActivityDtq.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetAllBranchDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetAllCustomerDelinquentHistoryDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetAllDebtsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetAllDebtsContractsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetBadDebtByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetBondsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetContractsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetContractsCountByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetCurrentContractsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetCustomerDelinquentHistoryByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetCustomerInformationByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetCustomerLogsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetDueDateContractsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetExpireContractsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetGuarantorsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetLastUpdateDateDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetOneMonthToDueDateContractsByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\GetPostponedByBranchCodeDto.cs" />
+    <Compile Include="Delinquent\Contracts\Manager\ManagerRequestDto.cs" />
+    <Compile Include="Delinquent\Customer\CustomerInformation.cs" />
+    <Compile Include="Delinquent\Customer\GetCustomerInformationDto.cs" />
+    <Compile Include="Delinquent\Factories\Implementations\CustomerDelinquentDtoFactory.cs" />
+    <Compile Include="Delinquent\Factories\Intefaces\ICustomerDelinquentDtoFactory.cs" />
+    <Compile Include="Delinquent\Log\Appointment\AddAppointmentLogDto.cs" />
+    <Compile Include="Delinquent\Log\Appointment\AppointmentLogDto.cs" />
+    <Compile Include="Delinquent\Log\Appointment\EditAppointmentLogDto.cs" />
+    <Compile Include="Delinquent\Log\Appointment\GetAppointmentLogDto.cs" />
+    <Compile Include="Delinquent\Log\Call\AddCallLogDto.cs" />
+    <Compile Include="Delinquent\Log\Call\CallLogDto.cs" />
+    <Compile Include="Delinquent\Log\Call\EditCallLogDto.cs" />
+    <Compile Include="Delinquent\Log\Call\GetCallLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\AddClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\ClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\DisableClearingEditingDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\EditClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\EditRequestClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\GetClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\GetRequestClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\RemoveClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\RequestClearingLogDto.cs" />
+    <Compile Include="Delinquent\Log\ClearingLog\RespondRequestClearingDto.cs" />
+    <Compile Include="Delinquent\Log\GetCustomerLogsDto.cs" />
+    <Compile Include="Delinquent\Log\GetYesterdayLogsDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\AddGivingAChanceLogDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\DisableGivingAChanceEditingDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\EditGivingAChanceLogDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\EditRequestGivingAChanceLogDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\GetGivingAChanceLogDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\GetRequestGivingAChanceLogDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\GivingAChanceLogDto.cs" />
+    <Compile Include="Delinquent\Log\GivingAChance\RequestGivingAChanceLogDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\AddImpunityForCrimesLogDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\DisableImpunityEditingDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\EditImpunityForCrimesLogDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\EditRequestImpunityForCrimesLogDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\GetImpunityLogDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\GetRequestImpunityLogDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\ImpunityForCrimesLogDto.cs" />
+    <Compile Include="Delinquent\Log\Impunity\RequestImpunityForCrimesLogDto.cs" />
+    <Compile Include="Delinquent\Log\LogDto.cs" />
+    <Compile Include="Delinquent\Log\Notice\AddNoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\Notice\EditNoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\Notice\GetNoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\Notice\NoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\Renewal\AddRenewalLogDto.cs" />
+    <Compile Include="Delinquent\Log\Renewal\EditRenewalLogDto.cs" />
+    <Compile Include="Delinquent\Log\Renewal\GetRenewalLogDto.cs" />
+    <Compile Include="Delinquent\Log\Renewal\RenewalLogDto.cs" />
+    <Compile Include="Delinquent\Log\RespondRequestGivingAChanceDto.cs" />
+    <Compile Include="Delinquent\Log\RespondRequestImpunityForCrimesDto.cs" />
+    <Compile Include="Delinquent\Log\Split\AddSplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\Split\CancelRequestSplitDto.cs" />
+    <Compile Include="Delinquent\Log\Split\DisableSplitEditingDto.cs" />
+    <Compile Include="Delinquent\Log\Split\EditRequestSplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\Split\EditSplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\Split\GetRequestSplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\Split\GetSplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\Split\RemoveSplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\Split\RequestSplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\Split\RespondRequestSplitDto.cs" />
+    <Compile Include="Delinquent\Log\Split\SplitLogDto.cs" />
+    <Compile Include="Delinquent\Log\WrittenNotice\AddWrittenNoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\WrittenNotice\EditWrittenNoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\WrittenNotice\GetWrittenNoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\WrittenNotice\WrittenNoticeLogDto.cs" />
+    <Compile Include="Delinquent\Log\YesterdayLogDto.cs" />
+    <Compile Include="Delinquent\Notification\GetNotificationsDto.cs" />
+    <Compile Include="Delinquent\Notification\NotificationDto.cs" />
+    <Compile Include="Delinquent\Notification\RemoveNotificationDto.cs" />
+    <Compile Include="Delinquent\Notification\UpdateNotificationToSeenDto.cs" />
+    <Compile Include="Ebanking\GetThursdayShiftDtq.cs" />
+    <Compile Include="Ebanking\ThursDayShiftDto.cs" />
+    <Compile Include="ErrorInfoDto.cs" />
+    <Compile Include="Finance\ReportFacilityDetailDto.cs" />
+    <Compile Include="Finance\DailyliquidityReportDto.cs" />
+    <Compile Include="Finance\GetDailyliquidityReportDtq.cs" />
+    <Compile Include="Finance\GetReportFacilityDetailDtq.cs" />
+    <Compile Include="Kendo\FilterDto.cs" />
+    <Compile Include="Kendo\SortDto.cs" />
+    <Compile Include="Misc\CalculateProfitDtc.cs" />
+    <Compile Include="ParsLogic\BranchInformationDtc.cs" />
+    <Compile Include="ParsLogic\ResultGetRowsActivityIdDto.cs" />
+    <Compile Include="ParsLogic\TaslListFilterDtc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supplies\AcceptSayadDtc.cs" />
+    <Compile Include="Supplies\AccountConditionDto.cs" />
+    <Compile Include="Supplies\AccountInformationDto.cs" />
+    <Compile Include="Supplies\AccountOwnerDto.cs" />
+    <Compile Include="Supplies\AccountSignerDto.cs" />
+    <Compile Include="Supplies\BranchCodeSystemDtq.cs" />
+    <Compile Include="Supplies\BriefAccountInformationDto.cs" />
+    <Compile Include="Supplies\CheckSayadStateDtq.cs" />
+    <Compile Include="Supplies\FaragirDto.cs" />
+    <Compile Include="Supplies\IranNaraChequeRequestDtc.cs" />
+    <Compile Include="Supplies\DeactivateBaseIBANDtc.cs" />
+    <Compile Include="Supplies\GetAccountInformationDtq.cs" />
+    <Compile Include="Supplies\IdentifierType.cs" />
+    <Compile Include="Supplies\InquiryRequestDtc.cs" />
+    <Compile Include="Supplies\IsValidBranchManagerDtq.cs" />
+    <Compile Include="Supplies\IsValidCustomerInformationDtq.cs" />
+    <Compile Include="Supplies\KarizResponseDto.cs" />
+    <Compile Include="Supplies\KarizResultDto.cs" />
+    <Compile Include="Supplies\PartyType.cs" />
+    <Compile Include="Supplies\RejectSayadDtc.cs" />
+    <Compile Include="TatCharity\AddPortalPensionFundDtc.cs" />
+    <Compile Include="TatCharity\AddTatPensionFundDtc.cs" />
+    <Compile Include="TatCharity\AddTatFundDtc.cs" />
+    <Compile Include="TatCharity\AddPortalFundDtc.cs" />
+    <Compile Include="TatCharity\TatPensionDto.cs" />
+    <Compile Include="TatCharity\TatLoanDto.cs" />
+    <Compile Include="TatCharity\TatApplicantDto.cs" />
+    <Compile Include="VipBanking\AllChequeDto.cs" />
+    <Compile Include="VipBanking\AllPotentialDto.cs" />
+    <Compile Include="VipBanking\AllVipDelinquentDto.cs" />
+    <Compile Include="VipBanking\AllVipDto.cs" />
+    <Compile Include="VipBanking\GeneralReportDto.cs" />
+    <Compile Include="VipBanking\GetAllChequeDto.cs" />
+    <Compile Include="VipBanking\GetAllPotentialDto.cs" />
+    <Compile Include="VipBanking\GetAllVip.cs" />
+    <Compile Include="VipBanking\GetAllVipDelinquentDto.cs" />
+    <Compile Include="VipBanking\GetChequesDto.cs" />
+    <Compile Include="VipBanking\GetMaxGeneralReportDtq.cs" />
+    <Compile Include="VipBanking\GetPotentialByCustomerNumberDtq.cs" />
+    <Compile Include="VipBanking\GetThirtyLastBalDtq.cs" />
+    <Compile Include="VipBanking\GetVipByCustomerNumberDtq.cs" />
+    <Compile Include="VipBanking\GetVipDelinquentsDto.cs" />
+    <Compile Include="VipBanking\PotentialDto.cs" />
+    <Compile Include="VipBanking\VipChequeDto.cs" />
+    <Compile Include="VipBanking\VipDelinquentDto.cs" />
+    <Compile Include="VipBanking\VipDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RahyabServices.Common\RahyabServices.Common.csproj">
+      <Project>{4a39eda3-01d5-4e60-afd2-f99c6b222dda}</Project>
+      <Name>RahyabServices.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+D:\Project\RahyabServices\RahyabServices.Business.SharepointAutoMapper\bin\Release\RahyabServices.Business.SharepointAutoMapper.dll
+D:\Project\RahyabServices\RahyabServices.Business.SharepointAutoMapper\bin\Release\RahyabServices.Business.SharepointAutoMapper.pdb
+D:\Project\RahyabServices\RahyabServices.Business.SharepointAutoMapper\bin\Release\Microsoft.SharePoint.Client.dll
+D:\Project\RahyabServices\RahyabServices.Business.SharepointAutoMapper\bin\Release\Microsoft.SharePoint.Client.Runtime.dll
+D:\Project\RahyabServices\RahyabServices.Business.SharepointAutoMapper\obj\Release\RahyabServices.Business.SharepointAutoMapper.dll
+D:\Project\RahyabServices\RahyabServices.Business.SharepointAutoMapper\obj\Release\RahyabServices.Business.SharepointAutoMapper.pdb

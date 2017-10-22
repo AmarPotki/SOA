@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using RahyabServices.Business.Domain.Models.Delinquent;
+using RahyabServices.DataAccess.Core.Delinquent;
+namespace RahyabServices.DataAccess.Repositories.Delinquent.Interfaces
+{
+    public interface ICustomerDelinquentRepository : IDelinquentRepository<CustomerDelinquent>
+    {
+        Task<bool> IsExistAsync(int id);
+        Task<bool> IsExistAsync(string customerCode);
+        IEnumerable<CustomerDelinquent> GetItemsNotInDate(string desireDate);
+        Task<IEnumerable<CustomerDelinquent>> GetExpiredEvents(DateTime date);
+        Task<CustomerDelinquent> GetCustomerDelinquentWithState(int CustomerDelinquentId);
+        Task<IEnumerable<CustomerDelinquent>> GetItemsNotInDateNoTrackingAsync(string desireDate, BankType bankType);
+        IEnumerable<CustomerDelinquent> GetContractsWithDesireRemainingTime(TimeBase timeBase);
+        Task<IEnumerable<CustomerDelinquent>> GetContractsWithDesireRemainingTimeAsync(TimeBase timeBase);
+        Task<IEnumerable<CustomerDelinquent>> GetContractsByBranchAsync(string branchCode);
+        Task<IEnumerable<CustomerDelinquent>> GetContractsByBranchAsync(int branchId);
+        Task<IEnumerable<CustomerDelinquent>> GetAllDebtContractsByBranchAsync(int branchId);
+        IEnumerable<CustomerDelinquent> GetContractsByBranch(string branchCode);
+        CustomerDelinquent GetContractById(int id);
+        Task<CustomerDelinquent> GetContractByIdAsync(int id);
+        Task<CustomerDelinquent> GetContractByCustomerNumberAsync(string customerNumber);
+        CustomerDelinquent GetContractByCustomerNumber(string customerNumber);
+        Task<int> GetCurrentCountAsync(string branchCode);
+        Task<int> GetTotalCountAsync(string branchCode);
+        Task<int> GetDueDateCountAsync(string branchCode);
+        Task<int> GetExpireCountAsync(string branchCode);
+        Task<IEnumerable<CustomerDelinquent>> GetContractsByBranchAndStatusAsync(string branchCode, string status);
+        Task<decimal> GetTotalSumAsync(string branchCode);
+        Task<int> GetOneMonthToDueDateCountAsync(string branchCode);
+        Task<IEnumerable<CustomerDelinquent>> GetOneMonthToDueDateAsync(string branchCode);
+        Task<IEnumerable<CustomerDelinquent>> GetAllDebtsAsync(string branchCode);
+        Task<decimal> GetSumOneMonthToDueDateAsync(string branchCode);
+        Task<decimal> GetCurrentSumAsync(string branch);
+        Task<decimal> GetDueDateSumAsync(string branchCode);
+        Task<decimal> GetExpireSumAsync(string branchCode);
+        Task<int> GetBadDebtAsync(string branchCode);
+        Task<decimal> GetBadDebtSumAsync(string branchCode);
+        Task<int> GetPostponedCountAsync(string branchCode);
+        Task<decimal> GetPostponedSumAsync(string branchCode);
+        Task<int> GetAllDebtsCountAsync(string branchCode);
+        Task<decimal> GetAllDebtsSumAsync(string branchCode);
+        Task<IEnumerable<CustomerDelinquent>> GetCustomerDelinquents();
+        Task<string> GetMaxHisDate(BankType bankType);
+        Task<IEnumerable<CustomerDelinquent>> GetAllAbisAsync();
+        Task<IEnumerable<CustomerDelinquent>> GetAllBankIranAsync();
+        Task<IEnumerable<CustomerDelinquent>> GetAllAsync();
+        Task<IEnumerable<CustomerDelinquent>> GetContractsByOldBranchesAndStatusAsync(IEnumerable<string> codes, string status);
+        Task<IEnumerable<CustomerDelinquent>> GetContractsByOldBranchesAsync(IEnumerable<string> codes);
+        Task<int> GetTotalCountByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetTotalSumByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<int> GetCurrentCountByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetCurrentSumByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<int> GetExpireCountByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetExpireSumByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<int> GetDueDateCountByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetDueDateSumByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<int> GetBadDebtByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetBadDebtSumByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<int> GetPostponedByOldBranchesCountAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetPostponedByOldBranchesSumAsync(IEnumerable<string> branchCodes);
+        Task<int> GetOneMonthToDueDateByOldBranchesCountAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetSumOneMonthToDueDateByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<IEnumerable<CustomerDelinquent>> GetOneMonthToDueDateByBranchesAsync(IEnumerable<string> branchCodes);
+        Task<IEnumerable<CustomerDelinquent>> GetAllDebtsByOldBranchesAsync(IEnumerable<string> branchCodes);
+        Task<int> GetAllDebtsByOldBranchCountAsync(IEnumerable<string> branchCodes);
+        Task<decimal> GetAllDebtsByOldBranchSumAsync(IEnumerable<string> branchCodes);
+    }
+}

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5471E924-55E3-402F-865E-DC433CE19543}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RahyabServices.DataAccess</RootNamespace>
+    <AssemblyName>RahyabServices.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client">
+      <HintPath>..\..\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime">
+      <HintPath>..\..\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\..\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\BankPerson\IBankPersonRepository.cs" />
+    <Compile Include="Core\BankPerson\BankPersonDataContext.cs" />
+    <Compile Include="Core\BankPerson\BankPersonRepositoryBase.cs" />
+    <Compile Include="Core\Bank\AbisLoanDataContext.cs" />
+    <Compile Include="Core\Bank\AbisRepositoryBase.cs" />
+    <Compile Include="Core\Bank\BankDataContext.cs" />
+    <Compile Include="Core\Bank\BankRepositoryBase.cs" />
+    <Compile Include="Core\Bank\IBankRepository.cs" />
+    <Compile Include="Core\BranchMarketing\BranchMarketingDataContext.cs" />
+    <Compile Include="Core\BranchMarketing\BranchMarketingRepositoryBase.cs" />
+    <Compile Include="Core\BranchMarketing\IBranchMarketingRepository.cs" />
+    <Compile Include="Core\DataContextFactory.cs" />
+    <Compile Include="Core\Delinquent\DelinquentDataContext.cs" />
+    <Compile Include="Core\Delinquent\DelinquentRepositoryBase.cs" />
+    <Compile Include="Core\Delinquent\IDelinquentRepository.cs" />
+    <Compile Include="Core\IDataContextFactory.cs" />
+    <Compile Include="Core\NullDatabaseInitializer.cs" />
+    <Compile Include="Core\SchemaSynchronizer.cs" />
+    <Compile Include="Core\Sharepoint\ISharepointRepository.cs" />
+    <Compile Include="Core\Sharepoint\SharepointDataContext.cs" />
+    <Compile Include="Core\Sharepoint\SharepointRepositoryBase.cs" />
+    <Compile Include="Core\Supplies\IranNaraRepositoryBase.cs" />
+    <Compile Include="Core\Supplies\IIRanNaraRepository.cs" />
+    <Compile Include="Core\Supplies\IranNaraDataContext.cs" />
+    <Compile Include="Core\VipBanking\VipBankingDataContext.cs" />
+    <Compile Include="Core\VipBanking\VipBankingRepositoryBase.cs" />
+    <Compile Include="Core\VipBanking\IVipBankingRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BankPerson\Implementations\OrganizationUnits.cs" />
+    <Compile Include="Repositories\BankPerson\Implementations\PersonInfoRepository.cs" />
+    <Compile Include="Repositories\BankPerson\Interfaces\IPersonInfoRepository.cs" />
+    <Compile Include="Repositories\BankPerson\Interfaces\IOrganizationUnitsRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\AbisDetailRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\AccountInfoRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\BankIranDetailRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\CustomerAddressRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\CustomerInfoRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\DelinquentTrRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\GuaranteeDetailRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\GuaranteeRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\LastBalRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\MonitorRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\RptftBondDelinquent.cs" />
+    <Compile Include="Repositories\Bank\Implementations\RptftBondRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\RptftGuarantorRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\RPTFTRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\SuppliesRepository.cs" />
+    <Compile Include="Repositories\Bank\Implementations\VwRizeAghsatRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IBankIranDetailRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IAbisDetailRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IAccountInfoRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\ICustomerAddressRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\ICustomerInfoRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IDelinquentTrRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IGuaranteeDetailRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IGuaranteeRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\ILastBalRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IMonitorRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IRptftBondDelinquentRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IRptftBondRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IRptftGuarantorRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IRPTFTRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\ISuppliesRepository.cs" />
+    <Compile Include="Repositories\Bank\Interfaces\IVwRizeAghsatRepository.cs" />
+    <Compile Include="Repositories\BranchMarketing\Implementations\DailyRevertCustomersRepository.cs" />
+    <Compile Include="Repositories\BranchMarketing\Implementations\MainRevertCustsRepository.cs" />
+    <Compile Include="Repositories\BranchMarketing\Interfaces\IDailyRevertCustomersRepository.cs" />
+    <Compile Include="Repositories\BranchMarketing\Interfaces\IMainRevertCustsRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Implementations\BranchClaimRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Implementations\BranchRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Implementations\CustomerDelinquentRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Implementations\LogBaseRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Implementations\NotificationRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Implementations\SmsTemplateRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Implementations\StateRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Interfaces\IBranchClaimRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Interfaces\IBranchRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Interfaces\ICustomerDelinquentRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Interfaces\ILogBaseRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Interfaces\INotificationRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Interfaces\ISmsTemplateRepository.cs" />
+    <Compile Include="Repositories\Delinquent\Interfaces\IStateRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\AtmOutputLibRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\AuthorizationRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\BranchCodeSystemRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\ClearingLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\CommunicationCustomerRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\ConvertListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\DailyliquidityReportRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\DeactivateBaseIbanRequestRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\GivingAChanceLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\PersonelDocListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\HrDocPermissionListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\ImpunityLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\QueryListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\RenewalLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\ReportFacilityDetailRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\Request.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\SuppliesRequestRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\SplitLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\ThursdayRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\ThursdayShiftRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Implementations\UserInformationRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IAtmOutputLibRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IBranchCodeSystemRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IConvertListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\ICommunicationCustomerRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IDailyliquidityReportRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IDeactivateBaseIbanRequestRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IAuthorizationRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IClearingLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IGivingAChanceLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IPersonelDocListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IHrDocPermissionListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IImpunityLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IRenewalLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IReportFacilityDetailRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\ISplitLogListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\ISuppliesRequestRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IThursdayShiftRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IUserInformationRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IThursdayRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IQueryListRepository.cs" />
+    <Compile Include="Repositories\Sharepoint\Interfaces\IRequestRepository.cs" />
+    <Compile Include="Repositories\Supplies\Implementations\IranNaraChequeRequestRepository.cs" />
+    <Compile Include="Repositories\Supplies\Implementations\RequestSerialIdRepository.cs" />
+    <Compile Include="Repositories\Supplies\Interfaces\IIranNaraChequeRequestRepository.cs" />
+    <Compile Include="Repositories\Supplies\Interfaces\IRequestSerialIdRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Implementations\PortalPensionFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Implementations\PortalLoanFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Implementations\TatPensionListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Implementations\TatPensionFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Implementations\TatLoanFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Implementations\TatLoanListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Implementations\TatApplicantListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Interfaces\IPortalPensionFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Interfaces\IPortalLoanFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Interfaces\ITatPensionListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Interfaces\ITatPensionFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Interfaces\ITatLoanFundsListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Interfaces\ITatLoanListRepository.cs" />
+    <Compile Include="Repositories\TatCharity\Interfaces\ITatApplicantListRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Implementations\ChequeRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Implementations\GeneralReportRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Implementations\PotentialRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Implementations\VipDelinquentRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Implementations\VipRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Interfaces\IChequeRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Interfaces\IGeneralReportRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Interfaces\IPotentialRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Interfaces\IVipDelinquentRepository.cs" />
+    <Compile Include="Repositories\VipBanking\Interfaces\IVipRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RahyabServices.Business.Domain\RahyabServices.Business.Domain.csproj">
+      <Project>{bfd7e641-f4db-417a-a0df-ce862de712c6}</Project>
+      <Name>RahyabServices.Business.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.Dtos\RahyabServices.Business.Dtos.csproj">
+      <Project>{7a9b5e9f-897e-45e2-8181-2170244e3bcf}</Project>
+      <Name>RahyabServices.Business.Dtos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Business.SharepointAutoMapper\RahyabServices.Business.SharepointAutoMapper.csproj">
+      <Project>{415962b2-4340-4160-8c14-aa5ff3b770fd}</Project>
+      <Name>RahyabServices.Business.SharepointAutoMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Common\RahyabServices.Common.csproj">
+      <Project>{4a39eda3-01d5-4e60-afd2-f99c6b222dda}</Project>
+      <Name>RahyabServices.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

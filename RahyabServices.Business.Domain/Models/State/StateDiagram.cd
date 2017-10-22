@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RahyabServices.Business.Domain.Models.State.RahyabServicesState" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\RahyabServicesState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.AppointmentState" Collapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\AppointmentState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.ClearingState" Collapsed="true">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\ClearingState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.FirstAnnounceState" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\FirstAnnounceState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.FirstNoticeCallState" Collapsed="true">
+    <Position X="3.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\FirstNoticeCallState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.ImpunityForCrimesState" Collapsed="true">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\ImpunityForCrimesState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.GivingAChanceState" Collapsed="true">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\GivingAChanceState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.LetterState" Collapsed="true">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\LetterState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.RegisterState" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\RegisterState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.SecondAnnounceState" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\SecondAnnounceState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.SecondNoticeCallState" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\SecondNoticeCallState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.SplitState" Collapsed="true">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\SplitState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.ThirdAnnounceState" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\ThirdAnnounceState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RahyabServices.Business.Domain.Models.State.ThirdNoticeCallState" Collapsed="true">
+    <Position X="3.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\ThirdNoticeCallState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="RahyabServices.Business.Domain.Models.State.IState" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\State\IState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetChequeBookStatusByInquiryCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChequeBookStatusByInquiryCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChequeBookStatusByInquiryCodeResult" type="tns:ChequeBookStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChequeBookStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Sheba" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LstChequeSerial" type="tns:ArrayOfChequeSerialDTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusReasonCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfChequeSerialDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChequeSerialDTO" nillable="true" type="tns:ChequeSerialDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChequeSerialDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SerialNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChequeSerial" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthHeader" type="tns:AuthHeader" />
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="InsertChequeBookRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chequeRequestDTO" type="tns:ChequeBookRequestDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChequeBookRequestDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SharedAccount" type="tns:SharedAccountTypes" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OwnerBranchName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OwnerBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IBAN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SheetCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountOwnersDTO" type="tns:ArrayOfAccountOwnersDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="SignatureOwnersDTO" type="tns:ArrayOfSignatureOwnersDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SharedAccountTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="UnShared" />
+          <s:enumeration value="Shared" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfAccountOwnersDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccountOwnersDTO" nillable="true" type="tns:AccountOwnersDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccountOwnersDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PartyType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdentifierType" type="tns:IdentifierTypeList" />
+          <s:element minOccurs="0" maxOccurs="1" name="AbisIdentifireType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="IdentifierTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="UnKnown" />
+          <s:enumeration value="NationalCode" />
+          <s:enumeration value="NationalID" />
+          <s:enumeration value="ForeignID" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSignatureOwnersDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SignatureOwnersDTO" nillable="true" type="tns:SignatureOwnersDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SignatureOwnersDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdentifierType" type="tns:IdentifierTypeList" />
+          <s:element minOccurs="0" maxOccurs="1" name="AbisIdentifireType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertChequeBookRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertChequeBookRequestResult" type="tns:RequestResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateAcceptInquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InquiryTypeCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAcceptInquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAcceptInquiryResult" type="tns:ExceptionFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExceptionFields">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Specific1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Specific2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Specific3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Specific4" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateRejectInquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRejectInquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateRejectInquiryResult" type="tns:ExceptionFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivateBaseIBAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IBAN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivateBaseIBANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeactivateBaseIBANResult" type="tns:ExceptionFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChequeAndDebtInquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChequeSerial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChequeAndDebtInquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChequeAndDebtInquiryResult" type="tns:ChequeInquiryStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChequeInquiryStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IBAN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountOwnerInquiryStatus" type="tns:ArrayOfPersonInquiryStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="SignatureOwnerInquiryStatus" type="tns:ArrayOfPersonInquiryStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPersonInquiryStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PersonInquiryStatus" nillable="true" type="tns:PersonInquiryStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonInquiryStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnedCheques" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DebtStatus" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmNewPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateChangePasswordResult" type="tns:ExceptionFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetChequeBookStatusByInquiryCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChequeBookStatusByInquiryCode" />
+  </wsdl:message>
+  <wsdl:message name="GetChequeBookStatusByInquiryCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChequeBookStatusByInquiryCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChequeBookStatusByInquiryCodeAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsertChequeBookRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertChequeBookRequest" />
+  </wsdl:message>
+  <wsdl:message name="InsertChequeBookRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertChequeBookRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertChequeBookRequestAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAcceptInquirySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAcceptInquiry" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAcceptInquirySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAcceptInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAcceptInquiryAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRejectInquirySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRejectInquiry" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRejectInquirySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRejectInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRejectInquiryAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateBaseIBANSoapIn">
+    <wsdl:part name="parameters" element="tns:DeactivateBaseIBAN" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateBaseIBANSoapOut">
+    <wsdl:part name="parameters" element="tns:DeactivateBaseIBANResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateBaseIBANAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetChequeAndDebtInquirySoapIn">
+    <wsdl:part name="parameters" element="tns:GetChequeAndDebtInquiry" />
+  </wsdl:message>
+  <wsdl:message name="GetChequeAndDebtInquirySoapOut">
+    <wsdl:part name="parameters" element="tns:GetChequeAndDebtInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChequeAndDebtInquiryAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="UpdateChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateChangePasswordAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="SayadServicesSoap">
+    <wsdl:operation name="GetChequeBookStatusByInquiryCode">
+      <wsdl:input message="tns:GetChequeBookStatusByInquiryCodeSoapIn" />
+      <wsdl:output message="tns:GetChequeBookStatusByInquiryCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertChequeBookRequest">
+      <wsdl:input message="tns:InsertChequeBookRequestSoapIn" />
+      <wsdl:output message="tns:InsertChequeBookRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAcceptInquiry">
+      <wsdl:input message="tns:UpdateAcceptInquirySoapIn" />
+      <wsdl:output message="tns:UpdateAcceptInquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRejectInquiry">
+      <wsdl:input message="tns:UpdateRejectInquirySoapIn" />
+      <wsdl:output message="tns:UpdateRejectInquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateBaseIBAN">
+      <wsdl:input message="tns:DeactivateBaseIBANSoapIn" />
+      <wsdl:output message="tns:DeactivateBaseIBANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChequeAndDebtInquiry">
+      <wsdl:input message="tns:GetChequeAndDebtInquirySoapIn" />
+      <wsdl:output message="tns:GetChequeAndDebtInquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChangePassword">
+      <wsdl:input message="tns:UpdateChangePasswordSoapIn" />
+      <wsdl:output message="tns:UpdateChangePasswordSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SayadServicesSoap" type="tns:SayadServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetChequeBookStatusByInquiryCode">
+      <soap:operation soapAction="http://tempuri.org/GetChequeBookStatusByInquiryCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetChequeBookStatusByInquiryCodeAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertChequeBookRequest">
+      <soap:operation soapAction="http://tempuri.org/InsertChequeBookRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertChequeBookRequestAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAcceptInquiry">
+      <soap:operation soapAction="http://tempuri.org/UpdateAcceptInquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateAcceptInquiryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRejectInquiry">
+      <soap:operation soapAction="http://tempuri.org/UpdateRejectInquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateRejectInquiryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateBaseIBAN">
+      <soap:operation soapAction="http://tempuri.org/DeactivateBaseIBAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeactivateBaseIBANAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChequeAndDebtInquiry">
+      <soap:operation soapAction="http://tempuri.org/GetChequeAndDebtInquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetChequeAndDebtInquiryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChangePassword">
+      <soap:operation soapAction="http://tempuri.org/UpdateChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateChangePasswordAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SayadServicesSoap12" type="tns:SayadServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetChequeBookStatusByInquiryCode">
+      <soap12:operation soapAction="http://tempuri.org/GetChequeBookStatusByInquiryCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetChequeBookStatusByInquiryCodeAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertChequeBookRequest">
+      <soap12:operation soapAction="http://tempuri.org/InsertChequeBookRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertChequeBookRequestAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAcceptInquiry">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAcceptInquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateAcceptInquiryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRejectInquiry">
+      <soap12:operation soapAction="http://tempuri.org/UpdateRejectInquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateRejectInquiryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateBaseIBAN">
+      <soap12:operation soapAction="http://tempuri.org/DeactivateBaseIBAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeactivateBaseIBANAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChequeAndDebtInquiry">
+      <soap12:operation soapAction="http://tempuri.org/GetChequeAndDebtInquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetChequeAndDebtInquiryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/UpdateChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateChangePasswordAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SayadServices">
+    <wsdl:port name="SayadServicesSoap" binding="tns:SayadServicesSoap">
+      <soap:address location="https://192.168.10.54:7000/sayadservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SayadServicesSoap12" binding="tns:SayadServicesSoap12">
+      <soap12:address location="https://192.168.10.54:7000/sayadservices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

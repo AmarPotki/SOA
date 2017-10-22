@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFD7E641-F4DB-417A-A0DF-CE862DE712C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RahyabServices.Business.Domain</RootNamespace>
+    <AssemblyName>RahyabServices.Business.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factories\Delinquent\Implementations\ChangeStatusLogFactory.cs" />
+    <Compile Include="Factories\Delinquent\Implementations\CustomerDelinquentFactory.cs" />
+    <Compile Include="Factories\Delinquent\Implementations\NotificationFactory.cs" />
+    <Compile Include="Factories\Delinquent\Interfaces\IChangeStatusLogFactory.cs" />
+    <Compile Include="Factories\Delinquent\Interfaces\ICustomerDelinquentFactory.cs" />
+    <Compile Include="Factories\Delinquent\Interfaces\INotificationFactory.cs" />
+    <Compile Include="Kendo\DataSourceResult.cs" />
+    <Compile Include="Kendo\Filter.cs" />
+    <Compile Include="Kendo\Sort.cs" />
+    <Compile Include="Models\BankPerson\GET_MASTER_BY_CODEResult.cs" />
+    <Compile Include="Models\BankPerson\GET_MASTER_OF_ORGResult.cs" />
+    <Compile Include="Models\BankPerson\IBankPersonEntity.cs" />
+    <Compile Include="Models\BankPerson\OrganizationUnits.cs" />
+    <Compile Include="Models\BankPerson\PersonAbUser.cs" />
+    <Compile Include="Models\BankPerson\PersonInfo.cs" />
+    <Compile Include="Models\BankPerson\WorkSection.cs" />
+    <Compile Include="Models\Bank\AbisDetail.cs" />
+    <Compile Include="Models\Bank\AccountInfo.cs" />
+    <Compile Include="Models\Bank\BankIranDetail.cs" />
+    <Compile Include="Models\Bank\BranchDelinquentReport.cs" />
+    <Compile Include="Models\Bank\CustomerAddress.cs" />
+    <Compile Include="Models\Bank\CustomerInfo.cs" />
+    <Compile Include="Models\Bank\DelinquentTr.cs" />
+    <Compile Include="Models\Bank\Guarantee.cs" />
+    <Compile Include="Models\Bank\GuaranteeDetail.cs" />
+    <Compile Include="Models\Bank\IBankEntity.cs" />
+    <Compile Include="Models\Bank\LastBal.cs" />
+    <Compile Include="Models\Bank\LastBalDetail.cs" />
+    <Compile Include="Models\Bank\Monitor.cs" />
+    <Compile Include="Models\Bank\RPTFT.cs" />
+    <Compile Include="Models\Bank\RptftAbisDetail.cs" />
+    <Compile Include="Models\Bank\RptftBankIranDetail.cs" />
+    <Compile Include="Models\Bank\RptftBond.cs" />
+    <Compile Include="Models\Bank\RptftBondDelinquent.cs" />
+    <Compile Include="Models\Bank\RptftGuarantee.cs" />
+    <Compile Include="Models\Bank\RptftGuarantor.cs" />
+    <Compile Include="Models\Bank\VwRizeAghsat.cs" />
+    <Compile Include="Models\BranchMarketing\CommunicationCustomerData.cs" />
+    <Compile Include="Models\BranchMarketing\DailyRevertCustomers.cs" />
+    <Compile Include="Models\BranchMarketing\IBranchMarketingEntity.cs" />
+    <Compile Include="Models\BranchMarketing\MainRevertCusts.cs" />
+    <Compile Include="Models\Sharepoint\AbsorbResourses\Request.cs" />
+    <Compile Include="Models\Sharepoint\BranchMarketing\CommunicationCustomer.cs" />
+    <Compile Include="Models\Sharepoint\BranchMarketing\CustomerLastBal.cs" />
+    <Compile Include="Models\Sharepoint\DailyliquidityReport\DailyliquidityReport.cs" />
+    <Compile Include="Models\Delinquent\BankType.cs" />
+    <Compile Include="Models\Delinquent\Branch.cs" />
+    <Compile Include="Models\Delinquent\BranchClaim.cs" />
+    <Compile Include="Models\Delinquent\BranchRate.cs" />
+    <Compile Include="Models\Delinquent\ContractType.cs" />
+    <Compile Include="Models\Delinquent\CustomerDelinquent.cs" />
+    <Compile Include="Models\Delinquent\IDelinquentEntity.cs" />
+    <Compile Include="Models\Delinquent\Log\AppointmentLog.cs" />
+    <Compile Include="Models\Delinquent\Log\CallLog.cs" />
+    <Compile Include="Models\Delinquent\Log\ChangeStatusLog.cs" />
+    <Compile Include="Models\Delinquent\Log\ClearingLog.cs" />
+    <Compile Include="Models\Delinquent\Log\GivingAChanceLog.cs" />
+    <Compile Include="Models\Delinquent\Log\ILog.cs" />
+    <Compile Include="Models\Delinquent\Log\ImpunityForCrimesLog.cs" />
+    <Compile Include="Models\Delinquent\Log\LogBase.cs" />
+    <Compile Include="Models\Delinquent\Log\MiniCustomerDelinquent.cs" />
+    <Compile Include="Models\Delinquent\Log\NoticeLog.cs" />
+    <Compile Include="Models\Delinquent\Log\RenewalLog.cs" />
+    <Compile Include="Models\Delinquent\Log\RequestClearingLog.cs" />
+    <Compile Include="Models\Delinquent\Log\RequestGivingAChanceLog.cs" />
+    <Compile Include="Models\Delinquent\Log\RequestImpunityForCrimesLog.cs" />
+    <Compile Include="Models\Delinquent\Log\RequestSplitLog.cs" />
+    <Compile Include="Models\Delinquent\Log\SMSLog.cs" />
+    <Compile Include="Models\Delinquent\Log\SplitLog.cs" />
+    <Compile Include="Models\Delinquent\Log\StatusType.cs" />
+    <Compile Include="Models\Delinquent\Log\WrittenNoticeLog.cs" />
+    <Compile Include="Models\Delinquent\Notification.cs" />
+    <Compile Include="Models\Delinquent\NotificationType.cs" />
+    <Compile Include="Models\Delinquent\RequestType.cs" />
+    <Compile Include="Models\Delinquent\SmsTemplate.cs" />
+    <Compile Include="Models\Delinquent\TimeBase.cs" />
+    <Compile Include="Models\Delinquent\Types\TemplateType.cs" />
+    <Compile Include="Models\Sharepoint\ClearingLogList.cs" />
+    <Compile Include="Models\Sharepoint\DailyliquidityReport\ReportFacilityDetail.cs" />
+    <Compile Include="Models\Sharepoint\Ebanking\Thursday.cs" />
+    <Compile Include="Models\Sharepoint\GivingAChanceLogList.cs" />
+    <Compile Include="Models\Sharepoint\OperationDepartment\ATMOutputLib.cs" />
+    <Compile Include="Models\Sharepoint\OperationDepartment\ConvertList.cs" />
+    <Compile Include="Models\Sharepoint\OperationDepartment\QueryList.cs" />
+    <Compile Include="Models\Sharepoint\PersonelDoc.cs" />
+    <Compile Include="Models\Sharepoint\HrDocPermissionList.cs" />
+    <Compile Include="Models\Sharepoint\ImpunityLogList.cs" />
+    <Compile Include="Models\Sharepoint\RenewalLogList.cs" />
+    <Compile Include="Models\Sharepoint\SuppliesRequest.cs" />
+    <Compile Include="Models\Sharepoint\SplitLogList.cs" />
+    <Compile Include="Models\Sharepoint\Ebanking\ThursdayShift.cs" />
+    <Compile Include="Models\Sharepoint\UserInformation.cs" />
+    <Compile Include="Models\State\AppointmentState.cs" />
+    <Compile Include="Models\State\ClearingState.cs" />
+    <Compile Include="Models\State\DelinquentState.cs" />
+    <Compile Include="Models\State\FirstAnnounceState.cs" />
+    <Compile Include="Models\State\FirstWrittenNoticeState.cs" />
+    <Compile Include="Models\State\GivingAChanceState.cs" />
+    <Compile Include="Models\State\ImpunityForCrimesState.cs" />
+    <Compile Include="Models\State\IState.cs" />
+    <Compile Include="Models\State\LetterState.cs" />
+    <Compile Include="Models\State\RegisterState.cs" />
+    <Compile Include="Models\State\RenewalState.cs" />
+    <Compile Include="Models\State\RequestClearingState.cs" />
+    <Compile Include="Models\State\RequestGivingAChanceState.cs" />
+    <Compile Include="Models\State\RequestImpunityForCrimesState.cs" />
+    <Compile Include="Models\State\RequestSplitState.cs" />
+    <Compile Include="Models\State\SecondAnnounceState.cs" />
+    <Compile Include="Models\State\SecondWrittenNoticeState.cs" />
+    <Compile Include="Models\State\SplitState.cs" />
+    <Compile Include="Models\State\ThirdAnnounceState.cs" />
+    <Compile Include="Models\State\ThirdWrittenNoticeState.cs" />
+    <Compile Include="Models\Sharepoint\BranchCodeSystem.cs" />
+    <Compile Include="Models\Supplies\IIranaraEntity.cs" />
+    <Compile Include="Models\Supplies\IranNaraChequeRequest.cs" />
+    <Compile Include="Models\Supplies\DeactivateBaseIbanRequest.cs" />
+    <Compile Include="Models\Supplies\RequestSerialId.cs" />
+    <Compile Include="Models\TatCharity\PortalPensionFundsList.cs" />
+    <Compile Include="Models\TatCharity\PortalLoanFundsList.cs" />
+    <Compile Include="Models\TatCharity\TatPensionFundsList.cs" />
+    <Compile Include="Models\TatCharity\TatLoanFundsList.cs" />
+    <Compile Include="Models\TatCharity\TatPensionList.cs" />
+    <Compile Include="Models\TatCharity\TatLoanList.cs" />
+    <Compile Include="Models\TatCharity\TatApplicantList.cs" />
+    <Compile Include="Models\VipBanking\Cheque.cs" />
+    <Compile Include="Models\VipBanking\GeneralReport.cs" />
+    <Compile Include="Models\VipBanking\IVipBankingEntity.cs" />
+    <Compile Include="Models\VipBanking\Potential.cs" />
+    <Compile Include="Models\VipBanking\Vip.cs" />
+    <Compile Include="Models\VipBanking\VipDelinquent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\State\StateDiagram.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factories\Bank\Implementations\" />
+    <Folder Include="Factories\Bank\Interfaces\" />
+    <Folder Include="Factories\Sharepoint\Implementations\" />
+    <Folder Include="Factories\Sharepoint\Interfaces\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RahyabServices.Business.SharepointAutoMapper\RahyabServices.Business.SharepointAutoMapper.csproj">
+      <Project>{415962b2-4340-4160-8c14-aa5ff3b770fd}</Project>
+      <Name>RahyabServices.Business.SharepointAutoMapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

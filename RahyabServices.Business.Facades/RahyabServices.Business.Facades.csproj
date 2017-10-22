@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2A10596-6E55-461B-9BC7-15718D1F570B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RahyabServices.Business.Facades</RootNamespace>
+    <AssemblyName>RahyabServices.Business.Facades</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementations\AdanicFacade.cs" />
+    <Compile Include="Implementations\FaraFekFacade.cs" />
+    <Compile Include="Implementations\TatCharityFacade.cs" />
+    <Compile Include="Implementations\KarizFacade.cs" />
+    <Compile Include="Implementations\ParsLogicFacade.cs" />
+    <Compile Include="Implementations\SayadFacade.cs" />
+    <Compile Include="Interfaces\IAdanicFacade.cs" />
+    <Compile Include="Interfaces\IFaraFekFacade.cs" />
+    <Compile Include="Interfaces\ITatCharityFacade.cs" />
+    <Compile Include="Interfaces\IHrFacade.cs" />
+    <Compile Include="Interfaces\IkarizFacade.cs" />
+    <Compile Include="Interfaces\IParsLogicFacade.cs" />
+    <Compile Include="Interfaces\ISayadFacad.cs" />
+    <Compile Include="Interfaces\ISharepointFacade.cs" />
+    <Compile Include="Interfaces\ISmsFacade.cs" />
+    <Compile Include="ParsLogic\PMICase.cs" />
+    <Compile Include="ParsLogic\PMIHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Proxy\PMIBase.cs" />
+    <Compile Include="Service References\SayadWithSSL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sayad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SayadWebRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.ChequeBookStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.ChequeBookStatusList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.ChequeInquiryStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.DeactivateBaseIBANResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.ExceptionFields.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.GetChequeAndDebtInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.GetChequeBookStatusByInquiryCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.GetListChequeBookStatusByChequeStatusTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.InsertChequeBookRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.RequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.UpdateAcceptInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.UpdateChangePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\RahyabServices.Business.Facades.SayadWithSSL.UpdateRejectInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SayadWithSSL\sayadservices1.wsdl" />
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.ChequeBookStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.ChequeBookStatusList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.ChequeInquiryStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.DeactivateBaseIBANResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.ExceptionFields.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.GetChequeAndDebtInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.GetChequeBookStatusByInquiryCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.GetListChequeBookStatusByChequeStatusTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.InsertChequeBookRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.RequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.UpdateAcceptInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.UpdateChangePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\RahyabServices.Business.Facades.Sayad.UpdateRejectInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sayad\sayadservices.wsdl" />
+    <None Include="Web References\SayadWebRef\ChequeBookStatus.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SayadWebRef\ChequeInquiryStatus.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SayadWebRef\ExceptionFields.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SayadWebRef\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SayadWebRef\RequestResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SayadWebRef\sayadservices.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RahyabServices.Business.Dtos\RahyabServices.Business.Dtos.csproj">
+      <Project>{7a9b5e9f-897e-45e2-8181-2170244e3bcf}</Project>
+      <Name>RahyabServices.Business.Dtos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RahyabServices.Common\RahyabServices.Common.csproj">
+      <Project>{4A39EDA3-01D5-4E60-AFD2-F99C6B222DDA}</Project>
+      <Name>RahyabServices.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SayadWithSSL\" />
+    <WCFMetadataStorage Include="Service References\Sayad\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sayad\sayadservices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sayad\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sayad\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sayad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SayadWithSSL\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SayadWithSSL\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SayadWithSSL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="D:\Project\sayadservices.xml">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SayadWebRef\</RelPath>
+      <UpdateFromURL>D:\Project\sayadservices.xml</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>RahyabServices_Business_Facades_SayadWebRef_SayadServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

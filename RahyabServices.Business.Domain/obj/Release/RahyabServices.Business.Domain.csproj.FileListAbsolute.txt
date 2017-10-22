@@ -1,0 +1,11 @@
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\RahyabServices.Business.Domain.dll
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\RahyabServices.Business.Domain.pdb
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\Newtonsoft.Json.dll
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\RahyabServices.Business.SharepointAutoMapper.dll
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\Microsoft.SharePoint.Client.dll
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\Microsoft.SharePoint.Client.Runtime.dll
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\RahyabServices.Business.SharepointAutoMapper.pdb
+D:\Project\RahyabServices\RahyabServices.Business.Domain\bin\Release\Newtonsoft.Json.xml
+D:\Project\RahyabServices\RahyabServices.Business.Domain\obj\Release\RahyabServices.Business.Domain.csprojResolveAssemblyReference.cache
+D:\Project\RahyabServices\RahyabServices.Business.Domain\obj\Release\RahyabServices.Business.Domain.dll
+D:\Project\RahyabServices\RahyabServices.Business.Domain\obj\Release\RahyabServices.Business.Domain.pdb

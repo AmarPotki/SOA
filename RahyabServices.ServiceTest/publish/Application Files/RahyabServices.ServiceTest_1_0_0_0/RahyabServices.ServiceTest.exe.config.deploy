@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+  </configSections>
+  <connectionStrings>
+    <add name="TAT_DWBI_ODS" connectionString="Data Source=biha.ab.net;initial catalog=TAT_DWBI_ODS;user id=RahyabDelinquent;Password=D#l!nQU#nT;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+    <add name="Hamyar" connectionString="Data Source=biha.ab.net;initial catalog=TAT_DWBI_ODS;user id=hamyar;Password=H@my@R!#462014;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+    <add name="Delinquent" connectionString="Data Source=172.30.1.113\MSSQLInspectors;Initial Catalog=Delinquent;user id=rahyabdelinquent;Password=QAZwsx@123;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+    <add name="VIP" connectionString="Data Source=10.100.120.64;initial catalog=VIPBanking;user id=sa;Password=dC5fxsgunJEagk8AtUFxqNsy;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+    <add name="vr" connectionString="data source=10.100.120.64;initial catalog=VIPBanking;user id=sa;password=dC5fxsgunJEagk8AtUFxqNsy;multipleactiveresultsets=True;application name=EntityFramework" providerName="System.Data.SqlClient" />
+    <add name="gg" connectionString="data source=10.100.120.64;initial catalog=VIPBanking;user id=sa;password=dC5fxsgunJEagk8AtUFxqNsy;multipleactiveresultsets=True;application name=EntityFramework" providerName="System.Data.SqlClient" />
+    <add name="VV" connectionString="data source=10.100.120.64;initial catalog=VIPBanking;user id=sa;password=dC5fxsgunJEagk8AtUFxqNsy;multipleactiveresultsets=True;application name=EntityFramework" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="SayadServicesSoap" />
+        <binding name="SayadServicesSoapSSL">
+          <security mode="Transport">
+                        <transport clientCredentialType="None" proxyCredentialType="None"
+                            realm="" />
+                        <message clientCredentialType="UserName" algorithmSuite="Default" />
+                    </security>
+        </binding>
+        <binding name="BasicHttpBinding_IVipBankingRestContract">
+          <security mode="Transport" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="https://192.168.10.54:7000/sayadservices.asmx"
+            binding="basicHttpBinding" bindingConfiguration="SayadServicesSoapSSL"
+            contract="SayadWithSSL.SayadServicesSoap" name="SayadServicesSoapSSL" />
+      <!--<endpoint address="http://192.168.10.54:4000/sayadservices.asmx" binding="basicHttpBinding" bindingConfiguration="SayadServicesSoap" contract="Sayad.SayadServicesSoap" name="SayadServicesSoap" />-->
+      <endpoint address="https://wcfrahyabwebservice.ab.net:8443/VipBankingRestService.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IVipBankingRestContract" contract="VipBankingRest.IVipBankingRestContract" name="BasicHttpBinding_IVipBankingRestContract" />
+    </client>
+  </system.serviceModel>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+  </startup>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="mssqllocaldb" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Autofac" publicKeyToken="17863af14b0044da" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.3.0.0" newVersion="4.3.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

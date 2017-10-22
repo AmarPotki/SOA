@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RahyabServices.Business.Facades.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RahyabServices_Business_Facades_SayadWebRef_SayadServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://192.168.10.54:7000/sayadservices.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

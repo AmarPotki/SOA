@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true"
+     Service="RahyabServices.Business.Contracts.Implementations.BranchMarketingRestContract, RahyabServices.Business.Contracts"
+   Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf" %>

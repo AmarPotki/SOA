@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\WCFRahyabWebService</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AbsorbResourcesRestService.svc">
+      <publishTime>08/30/2017 13:24:42</publishTime>
+    </File>
+    <File Include="AdanicRestService.svc">
+      <publishTime>08/13/2017 09:28:04</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>12/07/2016 09:52:28</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>12/07/2016 09:52:28</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>04/04/2017 06:35:00</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Wcf.dll">
+      <publishTime>09/11/2015 16:38:34</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>11/23/2016 23:51:42</publishTime>
+    </File>
+    <File Include="bin/Castle.Core.dll">
+      <publishTime>11/06/2014 02:14:08</publishTime>
+    </File>
+    <File Include="bin/cs/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/da/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/de/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/es/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/fa/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/fi/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/FluentValidation.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/fr/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/it/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/ko/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/07/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>06/06/2016 15:40:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>06/06/2016 10:45:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>06/06/2016 10:42:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SharePoint.Client.dll">
+      <publishTime>02/17/2014 05:03:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SharePoint.Client.Runtime.dll">
+      <publishTime>02/17/2014 05:03:44</publishTime>
+    </File>
+    <File Include="bin/mk/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/Moq.dll">
+      <publishTime>11/10/2016 23:32:54</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/13/2016 23:06:14</publishTime>
+    </File>
+    <File Include="bin/nl/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>05/05/2017 21:19:28</publishTime>
+    </File>
+    <File Include="bin/pl/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/pt/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.Bootstrapper.dll">
+      <publishTime>10/15/2017 11:59:18</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.Contracts.dll">
+      <publishTime>10/15/2017 11:59:17</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.Domain.dll">
+      <publishTime>10/11/2017 15:07:52</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.Dtos.dll">
+      <publishTime>10/15/2017 11:48:39</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.Facades.dll">
+      <publishTime>10/15/2017 11:48:40</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.Facades.XmlSerializers.dll">
+      <publishTime>10/15/2017 11:48:41</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.Services.dll">
+      <publishTime>10/15/2017 11:59:16</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Business.SharepointAutoMapper.dll">
+      <publishTime>09/05/2017 12:16:57</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Common.dll">
+      <publishTime>09/05/2017 12:16:57</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.DataAccess.dll">
+      <publishTime>10/15/2017 11:48:43</publishTime>
+    </File>
+    <File Include="bin/RahyabServices.Host.WebHost.dll">
+      <publishTime>10/15/2017 11:59:18</publishTime>
+    </File>
+    <File Include="bin/ru/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/sv/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/System.Linq.Dynamic.dll">
+      <publishTime>10/15/2016 20:49:24</publishTime>
+    </File>
+    <File Include="bin/tr/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="bin/zh-CN/FluentValidation.resources.dll">
+      <publishTime>02/26/2016 09:50:52</publishTime>
+    </File>
+    <File Include="BranchMarketingRestService.svc">
+      <publishTime>08/15/2017 12:12:32</publishTime>
+    </File>
+    <File Include="DelinquentCoreService.svc">
+      <publishTime>12/07/2016 14:04:25</publishTime>
+    </File>
+    <File Include="DelinquentRestService.svc">
+      <publishTime>12/07/2016 14:04:31</publishTime>
+    </File>
+    <File Include="DelinquentService.svc">
+      <publishTime>12/07/2016 14:04:54</publishTime>
+    </File>
+    <File Include="FaraFekRestService.svc">
+      <publishTime>08/13/2017 09:28:09</publishTime>
+    </File>
+    <File Include="FinanceRestService.svc">
+      <publishTime>07/19/2017 09:42:21</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/07/2016 09:55:29</publishTime>
+    </File>
+    <File Include="HrRestService.svc">
+      <publishTime>01/30/2017 17:47:58</publishTime>
+    </File>
+    <File Include="HrService.svc">
+      <publishTime>01/30/2017 17:47:58</publishTime>
+    </File>
+    <File Include="MiscRestService.svc">
+      <publishTime>06/12/2017 16:54:49</publishTime>
+    </File>
+    <File Include="MiscService.svc">
+      <publishTime>08/31/2017 11:20:09</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/16/2017 16:55:44</publishTime>
+    </File>
+    <File Include="ParsLogicService.svc">
+      <publishTime>05/23/2017 09:14:14</publishTime>
+    </File>
+    <File Include="SuppliesRestService.svc">
+      <publishTime>12/11/2016 12:06:58</publishTime>
+    </File>
+    <File Include="TatRestService.svc">
+      <publishTime>05/20/2017 11:50:15</publishTime>
+    </File>
+    <File Include="VipBankingRestService.svc">
+      <publishTime>01/24/2017 18:08:23</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/31/2017 11:40:41</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
